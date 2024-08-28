@@ -1,2 +1,8 @@
+# General
 ipykernel
 pandas
+
+# Webscraping
+
+
+# Modeling
