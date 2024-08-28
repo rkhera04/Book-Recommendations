@@ -3,6 +3,7 @@ ipykernel
 pandas
 
 # Webscraping
-
+bs4
+requests
 
 # Modeling
