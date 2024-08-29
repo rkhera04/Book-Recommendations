@@ -5,5 +5,6 @@ pandas
 # Webscraping
 bs4
 requests
+selenium
 
 # Modeling
