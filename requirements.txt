@@ -1,6 +1,7 @@
 # General
 ipykernel
 pandas
+numpy=1.26.4
 
 # Webscraping
 bs4
@@ -8,3 +9,6 @@ requests
 selenium
 
 # Modeling
+keybert
+
+
