@@ -2,6 +2,7 @@
 ipykernel
 pandas
 numpy==1.26.4
+streamlit
 
 # Webscraping
 bs4
@@ -13,5 +14,6 @@ transformers
 torch
 yake
 nltk
+spacy
 
 
