@@ -6,6 +6,12 @@ def get_search_results(query, df):
     return results
 
 def run_streamlit(df):
+    if 'page' not in st.session_state:
+        st.session_state.page = 0
+
+    if 'current_page' not in st.session_state:
+        st.session_state.current_page = 1
+
     st.title("Research Paper Recommendations")
 
     st.sidebar.header("Menu")
@@ -56,14 +62,15 @@ def run_streamlit(df):
     search_button = st.button("Search", use_container_width=True)
 
     if search_button:
-        st.session_state = 0
+        st.session_state.page = 1
 
-    if st.session_state == 0:
+    if st.session_state.page == 1:
         papers_per_page = 10
         search_results = get_search_results(search_query, df)
         total_papers = len(search_results)
         total_pages = (total_papers + papers_per_page - 1) // papers_per_page
 
+        # Ensure current page is within range
         st.session_state.current_page = min(max(st.session_state.current_page, 1), total_pages)
 
         col1, col2, col3 = st.columns([1, 5, 1])
@@ -74,14 +81,11 @@ def run_streamlit(df):
                     st.session_state.current_page -= 1
 
         with col2:
-            page_number = st.slider(
+            page_number = st.selectbox(
                 "Select Page",
-                min_value=1,
-                max_value=total_pages,
-                value=st.session_state.current_page,
-                step=1
+                options=list(range(1, total_pages + 1)),
+                index=st.session_state.current_page - 1
             )
-            # Sync the slider with the session state
             st.session_state.current_page = page_number
 
         with col3:
