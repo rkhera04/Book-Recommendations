@@ -15,5 +15,5 @@ torch
 yake
 nltk
 spacy
-
+sentence_transformers
 
