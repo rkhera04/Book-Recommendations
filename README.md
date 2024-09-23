@@ -90,7 +90,7 @@ The website.py file creates a Streamlit app where users can:
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/rkhera04/research-paper-recommender.git](https://github.com/rkhera04/Book-Recommendations.git)
+   git clone https://github.com/rkhera04/Book-Recommendations.git
    ```
 2. Install the required dependencies:
    ```bash
