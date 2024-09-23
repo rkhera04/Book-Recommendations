@@ -22,12 +22,12 @@ The recommendation engine ranks papers based on **cosine similarity** of their v
 
 
 ## File Descriptions
-- Modeling:
+### Modeling:
    -  **vectorize.py**:
       - Preprocesses text using tokenization, lemmatization, and removing stop words.
       - Vectorizes text using pre-trained `SentenceTransformer` embeddings.
       - Ranks abstracts based on cosine similarity.
-- Webscraping:
+### Webscraping:
    - **webscrape.py**:
       - Uses Selenium and BeautifulSoup to scrape research paper metadata from IEEE Xplore.
       - Extracts titles, authors, year, conference/journal names, and abstracts.
@@ -35,7 +35,7 @@ The recommendation engine ranks papers based on **cosine similarity** of their v
    - **publications.csv**:
       - CSV file conatining webscraped data
 
-- front_end:
+### front_end:
    - **website.py**:
       - Streamlit web interface where users can input a query and receive paper recommendations.
       - Allows filtering by author, year, and publisher.
