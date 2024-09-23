@@ -21,23 +21,24 @@ The **Research Paper Recommender System** scrapes research paper metadata (title
 The recommendation engine ranks papers based on **cosine similarity** of their vectorized abstract content, and the front-end is powered by a **Streamlit web app** for an intuitive user experience.
 
 
-
-
 ## File Descriptions
+- Modeling:
+   -  **vectorize.py**:
+      - Preprocesses text using tokenization, lemmatization, and removing stop words.
+      - Vectorizes text using pre-trained `SentenceTransformer` embeddings.
+      - Ranks abstracts based on cosine similarity.
+- Webscraping:
+   - **webscrape.py**:
+      - Uses Selenium and BeautifulSoup to scrape research paper metadata from IEEE Xplore.
+      - Extracts titles, authors, year, conference/journal names, and abstracts.
+      - Saves the scraped data in a CSV file.
+   - **publications.csv**:
+      - CSV file conatining webscraped data
 
-1. **vectorize.py**:
-   - Preprocesses text using tokenization, lemmatization, and removing stop words.
-   - Vectorizes text using pre-trained `SentenceTransformer` embeddings.
-   - Ranks abstracts based on cosine similarity.
-
-2. **webscrape.py**:
-   - Uses Selenium and BeautifulSoup to scrape research paper metadata from IEEE Xplore.
-   - Extracts titles, authors, year, conference/journal names, and abstracts.
-   - Saves the scraped data in a CSV file.
-
-3. **website.py**:
-   - Streamlit web interface where users can input a query and receive paper recommendations.
-   - Allows filtering by author, year, and publisher.
+- front_end:
+   - **website.py**:
+      - Streamlit web interface where users can input a query and receive paper recommendations.
+      - Allows filtering by author, year, and publisher.
 
 ## Web Scraping
 The webscrape.py file uses Selenium to automate the retrieval of research papers from IEEE Xplore. It scrapes the following data for each paper:
@@ -65,7 +66,7 @@ The website.py file creates a Streamlit app where users can:
 ### Interface
 - Search Query: Select a research paper from the drop-down menu.
 - Filters: Filter by content, author, year, or publisher.
-- Pagination: Navigate through search results with pagination.
+- Pages: Navigate through search results with pagination.
 
 
 ## Installation
