@@ -136,4 +136,4 @@ The website.py file creates a Streamlit app where users can:
 If you'd like to contribute, feel free to fork the repository and submit a pull request. All contributions are welcome!
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
