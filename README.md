@@ -22,7 +22,7 @@ The recommendation engine ranks papers based on **cosine similarity** of their v
 
 <br>
 
-<img src="images/sample_website_image.png" alt="An screenshot of the website." width="300"/>
+<img src="images/sample_website_image.png" alt="An screenshot of the website." width="1000"/>
 
 *Figure 1: A screenshot of the website.*
 
