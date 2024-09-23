@@ -82,7 +82,7 @@ The website.py file creates a Streamlit app where users can:
    ```
 4. Run the Streamlit app
    ```bash
-   streamlit run website.py
+   streamlit run front_end/main.py
    ```
 
 ## License
