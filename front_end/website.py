@@ -1,8 +1,15 @@
 import streamlit as st
+import os
+import sys
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(project_root)
+from modeling.vectorize import score_abstracts
+
 
 def get_search_results(query, df):
-
-    results = df.to_dict(orient='records')
+    sort_df = df.sort_values(by='Similarities', ascending=False)
+    results = sort_df.to_dict(orient='records')
     return results
 
 def run_streamlit(df):
@@ -66,6 +73,8 @@ def run_streamlit(df):
 
     if st.session_state.page == 1:
         papers_per_page = 10
+        # Updates csv with scores based on search_query
+        score_abstracts(search_query, df['Abstract'], df)
         search_results = get_search_results(search_query, df)
         total_papers = len(search_results)
         total_pages = (total_papers + papers_per_page - 1) // papers_per_page
