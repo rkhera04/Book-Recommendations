@@ -4,16 +4,16 @@ This project is a **content-based research paper recommender system** that helps
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Tech Stack](#tech-stack)
-3. [Project Structure](#project-structure)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Web Scraping](#web-scraping)
-7. [Content-based Recommender](#content-based-recommender)
-8. [Streamlit Application](#streamlit-application)
-9. [Contributing](#contributing)
-10. [License](#license)
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Web Scraping](#web-scraping)
+- [Content-based Recommender](#content-based-recommender)
+- [Streamlit Application](#streamlit-application)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
