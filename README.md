@@ -33,8 +33,6 @@ The recommendation engine ranks papers based on **cosine similarity** of their v
 - **sklearn**: For cosine similarity calculations and vectorization.
 - **Pandas**: For handling scraped data and CSV files.
 
-## Project Structure
-│ ├── vectorize.py # Contains NLP and content similarity logic ├── webscrape.py # Web scraping functionality to extract research papers from IEEE Xplore ├── website.py # Streamlit app for user interaction ├── requirements.txt # Dependencies for the project └── README.md # Project documentation
 
 
 ### Files Explained
