@@ -23,15 +23,6 @@ The **Research Paper Recommender System** scrapes research paper metadata (title
 
 The recommendation engine ranks papers based on **cosine similarity** of their vectorized abstract content, and the front-end is powered by a **Streamlit web app** for an intuitive user experience.
 
-## Tech Stack
-
-- **Python**
-- **Streamlit**: For building the web application.
-- **BeautifulSoup & Selenium**: For web scraping research papers.
-- **NLTK**: For natural language preprocessing.
-- **Sentence Transformers**: For embedding abstract texts.
-- **sklearn**: For cosine similarity calculations and vectorization.
-- **Pandas**: For handling scraped data and CSV files.
 
 
 
@@ -50,45 +41,6 @@ The recommendation engine ranks papers based on **cosine similarity** of their v
 3. **website.py**:
    - Streamlit web interface where users can input a query and receive paper recommendations.
    - Allows filtering by author, year, and publisher.
-
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/username/research-paper-recommender.git
-   ```
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the Streamlit app
-   ```bash
-   streamlit run website.py
-   ```
-
-## Usage
-
-### 1. Web Scraping
-To scrape research papers from IEEE Xplore, run the webscrape.py file:
-```bash
-python webscrape.py
-```
-This script will scrape metadata (titles, authors, abstracts, etc.) from IEEE Xplore for a specified number of pages. The data will be saved in a CSV file called publications.csv.
-
-### 2. Content-based Recommender
-To generate recommendations based on the content of research paper abstracts, use the vectorize.py file:
-```bash
-python vectorize.py
-```
-You can modify the abstracts list in the script to include the papers you want to compare.
-
-### 3. Streamlit Application
-Run the Streamlit app using the following command:
-```bash
-streamlit run website.py
-```
-This will launch a local web app where you can search for a paper, view the abstract, and get recommendations based on content similarity.
 
 ## Web Scraping
 The webscrape.py file uses Selenium to automate the retrieval of research papers from IEEE Xplore. It scrapes the following data for each paper:
@@ -132,8 +84,22 @@ The website.py file creates a Streamlit app where users can:
 - Filters: Filter by content, author, year, or publisher.
 - Pagination: Navigate through search results with pagination.
 
-## Contributing
-If you'd like to contribute, feel free to fork the repository and submit a pull request. All contributions are welcome!
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone [https://github.com/rkhera04/research-paper-recommender.git](https://github.com/rkhera04/Book-Recommendations.git)
+   ```
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the Streamlit app
+   ```bash
+   streamlit run website.py
+   ```
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
