@@ -20,6 +20,11 @@ The **Research Paper Recommender System** scrapes research paper metadata (title
 
 The recommendation engine ranks papers based on **cosine similarity** of their vectorized abstract content, and the front-end is powered by a **Streamlit web app** for an intuitive user experience.
 
+<br>
+
+<img src="images/sample_website_image.png" alt="An screenshot of the website." width="300"/>
+
+*Figure 1: A screenshot of the website.*
 
 ## File Descriptions
 ### Modeling:
