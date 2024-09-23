@@ -5,14 +5,10 @@ This project is a **content-based research paper recommender system** that helps
 ## Table of Contents
 
 - [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Web Scraping](#web-scraping)
 - [Content-based Recommender](#content-based-recommender)
 - [Streamlit Application](#streamlit-application)
-- [Contributing](#contributing)
+- [Installation](#installation)
 - [License](#license)
 
 ---
