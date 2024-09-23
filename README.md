@@ -5,6 +5,7 @@ This project is a **content-based research paper recommender system** that helps
 ## Table of Contents
 
 - [Overview](#overview)
+- [File Descriptions](#file-descriptions)
 - [Web Scraping](#web-scraping)
 - [Content-based Recommender](#content-based-recommender)
 - [Streamlit Application](#streamlit-application)
@@ -22,7 +23,7 @@ The recommendation engine ranks papers based on **cosine similarity** of their v
 
 
 
-### Files Explained
+## File Descriptions
 
 1. **vectorize.py**:
    - Preprocesses text using tokenization, lemmatization, and removing stop words.
