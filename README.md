@@ -56,21 +56,7 @@ The recommender system uses a content-based filtering approach by analyzing the 
 2. Vectorization: Abstracts are converted into dense vectors using pre-trained SentenceTransformer models.
 3. Similarity Calculation: Cosine similarity is used to find papers most similar to the query abstract.
 4. Ranking: Research papers are ranked based on their similarity scores.
-```python
-# Define a list of paper abstracts
-abstracts = [
-    "Deep learning for image detection...",
-    "Mathematical theory of communication...",
-    "Automatic license plate recognition...",
-    "Statistics of random signals...",
-]
 
-# Query abstract
-query_abstract = "Deep learning for image detection..."
-
-# Get ranked abstracts based on content similarity
-ranked_abstracts = rank_abstracts(query_abstract, abstracts)
-```
 ## Streamlit Application
 The website.py file creates a Streamlit app where users can:
 - Search for research papers by title.
