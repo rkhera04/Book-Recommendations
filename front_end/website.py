@@ -19,6 +19,12 @@ def run_streamlit(df):
     if 'current_page' not in st.session_state:
         st.session_state.current_page = 1
 
+    if 'last_search_query' not in st.session_state:
+        st.session_state.last_search_query = None
+
+    if 'search_triggered' not in st.session_state:
+        st.session_state.search_triggered = False
+
     st.title("Research Paper Recommendations")
 
     st.sidebar.header("Menu")
@@ -70,11 +76,19 @@ def run_streamlit(df):
 
     if search_button:
         st.session_state.page = 1
+        st.session_state.last_search_query = search_query
+        st.session_state.search_triggered = True
 
-    if st.session_state.page == 1:
+    if st.session_state.page == 1 and st.session_state.last_search_query:
         papers_per_page = 10
+
+
+        if st.session_state.search_triggered:
+            score_abstracts(st.session_state.last_search_query, df['Abstract'], df)
+            st.session_state.search_triggered = False  # Reset the flag after running
+
         # Updates csv with scores based on search_query
-        score_abstracts(search_query, df['Abstract'], df)
+        # score_abstracts(search_query, df['Abstract'], df)
         search_results = get_search_results(search_query, df)
         total_papers = len(search_results)
         total_pages = (total_papers + papers_per_page - 1) // papers_per_page
